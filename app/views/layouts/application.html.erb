@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Blocipedia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +10,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <ul class="nav nav-tabs">
+         <li><%= link_to "Home", welcome_index_path %></li>
+         <li><%= link_to "About", welcome_about_path %></li>
+      </ul>
+
+      <%= yield %>
+
+    </div>  
   </body>
 </html>
