@@ -44,12 +44,12 @@ RSpec.describe WikisController, type: :controller do
     end
 
     it "assigns the new wiki to @wiki" do
-      post :create, wiki: {title: RandomData.random_sentence, body: RandomData.random_paragraph, user: my_user}
+      post :create, wiki: {title: RandomData.random_sentence, body: RandomData.random_paragraph}
       expect(assigns(:wiki)).to eq Wiki.last
     end
 
     it "redirects to the new wiki" do
-      post :create, wiki: {title: RandomData.random_sentence, body: RandomData.random_paragraph, user: my_user}
+      post :create, wiki: {title: RandomData.random_sentence, body: RandomData.random_paragraph}
       expect(response).to redirect_to Wiki.last
     end
   end
@@ -118,7 +118,7 @@ RSpec.describe WikisController, type: :controller do
   describe "DELETE destroy" do
     it "deletes the wiki" do
       delete :destroy, {id: @my_wiki.id}
-      count = Post.where({id: @my_wiki.id}).size
+      count = Wiki.where({id: @my_wiki.id}).size
       expect(count).to eq 0
     end
 
