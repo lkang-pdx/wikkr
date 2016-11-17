@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   has_many :wikis, dependent: :destroy
 
-  after_initalize :init
+  after_initialize :init
 
   def init
     self.role ||= :standard
