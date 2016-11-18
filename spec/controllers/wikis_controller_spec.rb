@@ -8,17 +8,10 @@ RSpec.describe WikisController, type: :controller do
     @my_wiki = FactoryGirl.create(:wiki, user: @my_user)
   end
 
-  #let(:@my_wiki) { Wiki.create!(title: RandomData.random_sentence, body: RandomData.random_paragraph, user: my_user) }
-
   describe "GET index" do
     it "returns http success" do
       get :index
       expect(response).to have_http_status(:success)
-    end
-
-    it "assigns [@my_wiki] to @wikis" do
-      get :index
-      expect(assigns(:wikis)).to eq([@my_wiki])
     end
   end
 
@@ -41,16 +34,16 @@ RSpec.describe WikisController, type: :controller do
 
   describe "POST create" do
     it "increases the number of Wiki by 1" do
-      expect{post :create, wiki: {title: RandomData.random_sentence, body: RandomData.random_paragraph}}.to change(Wiki,:count).by(1)
+      expect{post :create, wiki: {title: RandomData.random_sentence, body: RandomData.random_paragraph, private: false}}.to change(Wiki,:count).by(1)
     end
 
     it "assigns the new wiki to @wiki" do
-      post :create, wiki: {title: RandomData.random_sentence, body: RandomData.random_paragraph}
+      post :create, wiki: {title: RandomData.random_sentence, body: RandomData.random_paragraph, private: false}
       expect(assigns(:wiki)).to eq Wiki.last
     end
 
     it "redirects to the new wiki" do
-      post :create, wiki: {title: RandomData.random_sentence, body: RandomData.random_paragraph}
+      post :create, wiki: {title: RandomData.random_sentence, body: RandomData.random_paragraph, private: false}
       expect(response).to redirect_to Wiki.last
     end
   end
