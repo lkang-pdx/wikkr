@@ -9,9 +9,10 @@ class User < ApplicationRecord
 
   after_initialize :init
 
-  def init
-    self.role ||= :standard
-  end
-
   enum role: [:standard, :premium, :admin]
+
+  private
+  def init
+    self.add_role :standard
+  end
 end

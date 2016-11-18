@@ -7,26 +7,38 @@ class WikiPolicy
   end
 
   def show?
-    user.present?
+    if wiki.private
+      user == wiki.user
+    else
+      true
+    end
   end
 
   def create?
-    user.present?
+    true
   end
 
   def new?
-    user.present?
+    true
   end
 
   def update?
-    user.present?
+    if wiki.private
+      user == wiki.user
+    else
+      true
+    end
   end
 
   def edit?
-    user.present?
+    if wiki.private
+      user == wiki.user
+    else
+      true
+    end
   end
 
   def destroy?
-    user == wiki.user || user.has_role? :admin 
+    user == wiki.user || user.is_admin?
   end
 end

@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe WikisController, type: :controller do
+  include Devise::TestHelpers
   before(:each) do
     @my_user = FactoryGirl.create(:user)
     sign_in @my_user
