@@ -26,55 +26,55 @@ RSpec.describe User, type: :model do
 
     context "standard user" do
       before do
-        @user = FactoryGirl.create(:standard)
+        @standard_user = FactoryGirl.create(:standard)
       end
 
       it "returns true for #standard?" do
-        expect(user.standard?).to be_truthy
+        expect(@standard_user.has_role? :standard).to be_truthy
       end
 
       it "returns false for #admin?" do
-        expect(user.admin?).to be_falsey
+        expect(@standard_user.has_role? :admin).to be_falsey
       end
 
       it "returns false for #premium?" do
-        expect(user.premium?).to be_falsey
+        expect(@standard_user.has_role? :premium).to be_falsey
       end
     end
 
     context "admin user" do
       before do
-        @user = FactoryGirl.create(:admin)
+        @admin_user = FactoryGirl.create(:admin)
       end
 
       it "returns false for #standard?" do
-        expect(user.standard?).to be_falsey
+        expect(@admin_user.has_role? :standard).to be_truthy
       end
 
       it "returns false for #premium?" do
-        expect(user.premium?).to be_falsey
+        expect(@admin_user.has_role? :premium).to be_falsey
       end
 
       it "returns true for #admin?" do
-        expect(user.admin?).to be_truthy
+        expect(@admin_user.has_role? :admin).to be_truthy
       end
     end
 
     context "premium user" do
       before do
-        @user = FactoryGirl.create(:premium)
+        @premium_user = FactoryGirl.create(:premium)
       end
 
       it "returns false for #standard?" do
-        expect(user.standard?).to be_falsey
+        expect(@premium_user.has_role? :standard).to be_truthy
       end
 
       it "returns false for #premium?" do
-        expect(user.premium?).to be_truthy
+        expect(@premium_user.has_role? :premium).to be_truthy
       end
 
       it "returns true for #admin?" do
-        expect(user.admin?).to be_falsey
+        expect(@premium_user.has_role? :admin).to be_falsey
       end
     end
   end

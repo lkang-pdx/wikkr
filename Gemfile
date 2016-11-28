@@ -9,11 +9,14 @@ group :production do
   gem 'rails_12factor'
 end
 
+group :development, :test do
+  gem 'pry-rails'
+end
+
 # #2
 group :development do
   gem 'sqlite3'
   gem 'listen'
-  gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
