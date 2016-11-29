@@ -11,6 +11,7 @@ end
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'faker'
 end
 
 # #2
@@ -25,7 +26,6 @@ group :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'rails-controller-testing'
   gem 'shoulda'
-  gem 'faker'
   gem 'factory_girl_rails'
   gem 'simplecov'
 end
