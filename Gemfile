@@ -50,3 +50,5 @@ gem 'figaro', '1.0'
 gem 'pundit'
 
 gem 'rolify'
+
+gem 'stripe'
