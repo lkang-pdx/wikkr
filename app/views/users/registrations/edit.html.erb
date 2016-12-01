@@ -42,7 +42,7 @@
 
 <% if current_user.is_premium? %>
   <h3>Downgrade my account</h3>
-  <p> <%= link_to "Downgrade Account to Standard?", charge_path(current_user), data: { confirm: "Are you sure?"}, method: :post %> </p>
+  <p> <%= link_to "Downgrade Account to Standard?", downgrade_path(current_user), data: { confirm: "Are you sure?"}, method: :post %> </p>
 <% end %>
 
 <%= link_to "Back", :back %>
