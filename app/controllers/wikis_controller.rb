@@ -1,11 +1,17 @@
 class WikisController < ApplicationController
   def index
     @wikis = Wiki.all
+    authorize @wikis
   end
 
   def show
     @wiki = Wiki.find(params[:id])
     authorize @wiki
+
+    if @wiki.private
+      flash[:alert] = "You must be signed in to view private wikis."
+      redirect_to new_user_session_path
+    end
   end
 
   def new

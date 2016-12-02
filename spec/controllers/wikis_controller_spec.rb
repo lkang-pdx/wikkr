@@ -6,6 +6,7 @@ RSpec.describe WikisController, type: :controller do
     @my_user = FactoryGirl.create(:user)
     sign_in @my_user
     @my_wiki = FactoryGirl.create(:wiki, user: @my_user)
+    @my_private_wiki = FactoryGirl.create(:wiki, user: @my_user, private: true)
   end
 
   describe "GET index" do

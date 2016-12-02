@@ -6,8 +6,12 @@ class WikiPolicy
     @wiki = wiki
   end
 
+  def index?
+    true
+  end
+
   def show?
-    if wiki.private
+    if wiki.private?
       user == wiki.user
     else
       true
@@ -23,7 +27,7 @@ class WikiPolicy
   end
 
   def update?
-    if wiki.private
+    if wiki.private?
       user == wiki.user
     else
       true
@@ -31,7 +35,7 @@ class WikiPolicy
   end
 
   def edit?
-    if wiki.private
+    if wiki.private?
       user == wiki.user
     else
       true
