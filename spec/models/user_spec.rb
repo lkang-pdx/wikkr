@@ -20,10 +20,6 @@ RSpec.describe User, type: :model do
   end
 
   describe "roles" do
-    # it "is standard by default" do
-    #   expect(user.role).to eql('standard')
-    # end
-
     context "standard user" do
       before do
         @standard_user = FactoryGirl.create(:standard)

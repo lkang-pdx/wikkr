@@ -20,4 +20,22 @@ RSpec.describe Wiki, type: :model do
       expect(wiki.private).to be(false)
     end
   end
+
+  describe "scopes" do
+    before do
+      @public_wiki = FactoryGirl.create(:wiki)
+      @private_wiki = FactoryGirl.create(:wiki, private: true)
+    end
+
+    describe "visible_to(user)" do
+      it "returns all wikis if the user is present" do
+        user = User.new
+        expect(Wiki.visible_to(user)).to eq(Wiki.all)
+      end
+
+      it "returns only public wikis if user is nil" do
+        expect(Wiki.visible_to(nil)).to eq([@public_wiki])
+      end
+    end
+  end
 end
