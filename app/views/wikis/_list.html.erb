@@ -1,0 +1,5 @@
+<div>
+  <% @wiki.collaborators.each do |collaborator| %>
+    <h5><%= collaborator.user.email %> <%= link_to "", [collaborator], method: :delete, class: 'glyphicon glyphicon-remove-circle', data: {confirm: "Are you sure you want to delete this contributor?"} %></h5>
+  <% end %>
+</div>

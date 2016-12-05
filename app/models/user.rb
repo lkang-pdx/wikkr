@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   has_many :wikis, dependent: :destroy
 
+  has_many :collaborators
+
   after_initialize :init
 
   enum role: [:standard, :premium, :admin]

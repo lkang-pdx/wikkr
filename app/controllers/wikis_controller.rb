@@ -5,6 +5,7 @@ class WikisController < ApplicationController
 
   def show
     @wiki = Wiki.find(params[:id])
+    @all_collaborators = Collaborator.available(@wiki, current_user)
     authorize @wiki
   end
 
