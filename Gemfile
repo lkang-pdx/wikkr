@@ -54,3 +54,5 @@ gem 'rolify'
 gem 'stripe'
 
 gem 'stripe-ruby-mock', '~> 2.3.1', :require => 'stripe_mock'
+
+gem 'redcarpet'
