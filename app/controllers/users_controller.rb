@@ -4,6 +4,8 @@ class UsersController < ApplicationController
     @user.remove_role :premium
 
     if @user.save
+      wikis = @user.wikis
+      wikis.update_all(private: false)
       flash[:notice] = "Your membership has been downgraded to standard."
       redirect_to root_path
     else
