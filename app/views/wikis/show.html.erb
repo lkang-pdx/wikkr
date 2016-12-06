@@ -12,11 +12,15 @@
   </div>
 </div>
 
+<% if current_user.id == @wiki.user_id && @wiki.private %>
 <h3>Available Collaborators</h3>
 <div class="container">
   <%= render partial: 'collaborators' %>
 </div>
+<% end %>
+<% if @wiki.private %>
 <h3>Current Collaborators</h3>
 <div class="container">
   <p><%= render partial: 'list' %></p>
 </div>
+<% end %>
