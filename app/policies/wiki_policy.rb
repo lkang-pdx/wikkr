@@ -65,7 +65,7 @@ class WikiPolicy
       elsif user.is_premium?
         all_wikis = scope.all
         all_wikis.each do |wiki|
-          if !wiki.private || wiki.user == user
+          if !wiki.private || wiki.user == user || wiki.collaborators.pluck(:user_id).include?(user.id)
             wikis << wiki
           end
         end
@@ -73,7 +73,7 @@ class WikiPolicy
         all_wikis = scope.all
         wikis = []
         all_wikis.each do |wiki|
-          if !wiki.private
+          if !wiki.private || wiki.collaborators.pluck(:user_id).include?(user.id)
             wikis << wiki
           end
         end
