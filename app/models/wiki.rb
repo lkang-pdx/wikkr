@@ -10,3 +10,4 @@ class Wiki < ApplicationRecord
 
   scope :visible_to, -> (user) { user ? all : where(private: false) }
 end
+Wiki.import
