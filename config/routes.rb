@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'about' => 'welcome#about'
 
+  get 'search', to: 'search#search'
+
   post "users/downgrade" => "users#downgrade", :as => "downgrade"
 
   root 'welcome#index'
