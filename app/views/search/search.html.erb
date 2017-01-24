@@ -12,8 +12,16 @@
   <% @wikis.each do |wiki| %>
     <li>
       <h3>
-        <%= link_to wiki.title, controller: "wikis", action: "show", id: wiki._id%>
+        <%= link_to wiki.try(:highlight).try(:title) ? wiki.highlight.title[0].html_safe : wiki.title,
+          controller: "wikis",
+          action: "show",
+          id: wiki._id%>
       </h3>
+      <% if wiki.try(:highlight).try(:body) %>
+        <% wiki.highlight.body.each do |snippet| %>
+          <p><%= snippet.html_safe %>...</p>
+        <% end %>
+      <% end %>
     </li>
   <% end %>
 </ul>
