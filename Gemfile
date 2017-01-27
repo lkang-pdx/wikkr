@@ -7,6 +7,7 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'bonsai-elasticsearch-rails'
 end
 
 group :development, :test do
