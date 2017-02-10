@@ -1,23 +1,26 @@
 <div class="jumbotron">
   <h1>Blocipedia</h1>
   <p>Blocipedia is a resource for sharing knowledge with your friends!</p>
-  <p>
-  <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
-  <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
-  </p>
 </div>
 
-<div class="row">
-  <div class="col-md-4">
-    <h2>Makes you knowledgable</h2>
-    <p>In just a few minutes you'll be able to learn anything about anything.</p>
-  </div>
-  <div class="col-md-4">
-    <h2>Public Forum for Information</h2>
-    <p>Interact with communities around the world to learn details that individuals can add to broader topics.</p>
-  </div>
-  <div class="col-md-4">
-    <h2>Start Your Own Topics</h2>
-    <p>If you find something that isn't on our application yet, create your own topic and educate other members.</p>
-  </div>
-</div>
+    <div class="columns">
+      <ul class="price">
+        <li class="header">Basic</li>
+        <li class="grey">$ 0</li>
+        <li>Unlimited public wikis</li>
+        <li>Unlimited search</li>
+        <li>Render Markdown syntax</li>
+        <li class="grey"><%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
+      </ul>
+    </div>
+
+    <div class="columns">
+      <ul class="price">
+        <li class="header-premium">Premium</li>
+        <li class="grey">$ 15 / month</li>
+        <li>Unlimited private wikis</li>
+        <li>Add and remove collarborators</li>
+        <li>Upgrade account using Stripe</li>
+        <li class="grey"><%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
+      </ul>
+    </div>
