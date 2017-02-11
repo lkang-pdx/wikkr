@@ -1,26 +1,28 @@
 <div class="jumbotron">
   <h1>Blocipedia</h1>
-  <p>Blocipedia is a resource for sharing knowledge with your friends!</p>
+  <p>The best resource for sharing knowledge with your friends!</p>
 </div>
-
-    <div class="columns">
-      <ul class="price">
-        <li class="header">Basic</li>
-        <li class="grey">$ 0</li>
-        <li>Unlimited public wikis</li>
-        <li>Unlimited search</li>
-        <li>Render Markdown syntax</li>
-        <li class="grey"><%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
-      </ul>
-    </div>
-
-    <div class="columns">
-      <ul class="price">
-        <li class="header-premium">Premium</li>
-        <li class="grey">$ 15 / month</li>
-        <li>Unlimited private wikis</li>
-        <li>Add and remove collarborators</li>
-        <li>Upgrade account using Stripe</li>
-        <li class="grey"><%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
-      </ul>
-    </div>
+<div class="columns">
+  <ul class="price">
+    <li class="header">Basic Plan</li>
+    <li class="grey">FREE</li>
+    <li>Free public wikis</li>
+    <li class="grey"><%= link_to "Go Basic", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
+  </ul>
+</div>
+<div class="columns">
+  <ul class="price">
+    <li class="header-premium">Premium Plan</li>
+    <li class="grey">$15/month</li>
+    <li>Unlimited private wikis</li>
+    <li class="grey"><%= link_to "Go Premium", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
+  </ul>
+</div>
+<div class="columns">
+  <ul class="price">
+    <li class="header-platinum">Platinum Plan</li>
+    <li class="grey">$150/year</li>
+    <li>Coming soon!</li>
+    <li class="grey"><%= link_to "Go Platinum", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
+  </ul>
+</div>

@@ -5,7 +5,7 @@
 /* Create three columns of equal width */
 .columns {
     float: left;
-    width: 50%;
+    width: 33%;
     padding: 8px;
 }
 
@@ -26,13 +26,19 @@
 
 /* Pricing header */
 .price .header {
-    background-color: #111;
+    background-color: gray;
     color: white;
     font-size: 25px;
 }
 
 /* Pricing header */
 .header-premium {
+    background-color: #0099ff;
+    color: white;
+    font-size: 25px;
+}
+
+.header-platinum {
     background-color: #00b08b;
     color: white;
     font-size: 25px;
