@@ -1,5 +1,5 @@
 <div class="well">
-  <h3>Blocipedia allows users create their own wikis and share them publicly or privately with other collaborators.</h3>
+  <h3>Wikkr creates public and private Markdown-based wikis.</h3>
   <h4>Features:</h4>
   <ul>
     <li>Support admin, standard, and premium roles</li>
@@ -11,6 +11,31 @@
     <li>Search wikis using Elasticsearch</li>
   </ul>
   <h5><a href="https://github.com/lkang-pdx/blocipedia">GitHub Repo</a></h5>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Basic Plan</li>
+    <li class="grey">FREE</li>
+    <li>Free public wikis</li>
+    <li class="grey"><%= link_to "Go Basic", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
+  </ul>
+</div>
+<div class="columns">
+  <ul class="price">
+    <li class="header-premium">Premium Plan</li>
+    <li class="grey">$15<small>/year</small></li>
+    <li>Unlimited private wikis</li>
+    <li class="grey"><%= link_to "Go Premium", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
+  </ul>
+</div>
+<div class="columns">
+  <ul class="price">
+    <li class="header-platinum">Platinum Plan</li>
+    <li class="grey">$30<small>/year</small></li>
+    <li>Coming soon!</li>
+    <li class="grey"><%= link_to "Go Platinum", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
+  </ul>
 </div>
 
 <script type="text/javascript">

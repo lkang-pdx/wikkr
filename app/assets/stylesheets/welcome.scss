@@ -64,3 +64,53 @@
         width: 100%;
     }
 }
+
+#banner {
+	background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(image_path("meeting.jpg"));
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	width: 100%;
+	min-height: 500px;
+	display: table;
+	.banner_content {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		h1 {
+			@include bold_font;
+			color: white;
+			font-size: 4rem;
+			margin: 0;
+      margin-bottom: 10px;
+		}
+		h3 {
+			font-size: 2rem;
+			margin: 2 2 2 2;
+			color: white;
+      margin-bottom: 20px;
+		}
+	}
+}
+
+#bottom_cta {
+	text-align: center;
+	padding: 5rem 0;
+	h2 {
+		@include bold_font;
+		color: $green;
+		font-size: 3rem;
+		margin-top: 10px;
+    margin-bottom: 10px;
+	}
+	p {
+			font-size: 1.75rem;
+			color: $dark_gray;
+      margin-bottom: 20px;
+		}
+}

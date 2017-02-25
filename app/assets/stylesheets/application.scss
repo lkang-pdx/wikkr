@@ -10,31 +10,19 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import 'normalize.css';
+ @import 'global.scss';
+ @import 'welcome.scss';
+ @import 'search.scss';
 
- .user-info {
+.user-info {
   margin-top: 9px;
 }
 
 .nav {
-  margin-top: 5px;
-}
-
-.jumbotron {
-    margin-bottom: 0px;
-    background-image: url(image_path("splash.jpg"));
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    text-shadow: black 0.3em 0.3em 0.3em;
-    background-attachment: fixed;
-    width: 100%;
-    min-height: 300px;
-    display: table;
-    background-attachment: fixed;
+  margin-top: 3px;
 }
