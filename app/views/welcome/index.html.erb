@@ -1,34 +1,22 @@
-<div class="jumbotron">
-  <h1>Blocipedia</h1>
-  <p>Share knowledge with your friends!</p>
+<div id='banner'>
+  <div class='banner_content'>
+    <h1>Wikkr</h1>
+    <h3>Join the millions of people who rely on Wikkr to capture off-the-cuff ideas.</h3>
+    <p>
+      <%= link_to "Create Free Wikis", new_user_registration_path, class: 'button bt-primary' %>
+    </p>
+  </div>
 </div>
-<p class="lead">
-  <blockquote>
-    <p>Wikis are a great way to collaborate on community-sourced content.</p>
-    <footer>Luna Kang</cite></footer>
-  </blockquote>
-</p>
-<div class="columns">
-  <ul class="price">
-    <li class="header">Basic Plan</li>
-    <li class="grey">FREE</li>
-    <li>Free public wikis</li>
-    <li class="grey"><%= link_to "Go Basic", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
-  </ul>
+<div id='bottom_cta'>
+  <div class='wrapper'>
+    <i class='fa fa-flash fa-3x'></i>
+    <h2>Brainstorm Like a Boss</h2>
+    <p>Collaborate seamlessly with coworkers from anywhere.</p>
+    <p>
+      <%= link_to "Sign Me Up", new_user_registration_path, class: 'button' %>
+    </p>
+  </div>
 </div>
-<div class="columns">
-  <ul class="price">
-    <li class="header-premium">Premium Plan</li>
-    <li class="grey">$15/month</li>
-    <li>Unlimited private wikis</li>
-    <li class="grey"><%= link_to "Go Premium", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
-  </ul>
-</div>
-<div class="columns">
-  <ul class="price">
-    <li class="header-platinum">Platinum Plan</li>
-    <li class="grey">$150/year</li>
-    <li>Coming soon!</li>
-    <li class="grey"><%= link_to "Go Platinum", new_user_registration_path, class: 'btn btn-primary btn-lg' %></li>
-  </ul>
-</div>
+<footer>
+  <p>&copy; 2017 Wikkr</p>
+</footer>

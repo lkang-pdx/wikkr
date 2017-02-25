@@ -1,7 +1,7 @@
-## Blocipedia
+## Wikkr
 #### Written in Ruby, HTML & CSS.
 
-You can checkout Blocipedia [here](https://warm-brook-93872.herokuapp.com/). Create your own wikis today!
+You can checkout Wikkr [here](https://warm-brook-93872.herokuapp.com/). Create your own wikis today!
 
 ###Features:
 
