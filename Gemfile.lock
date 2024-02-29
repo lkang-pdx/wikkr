@@ -150,7 +150,7 @@ GEM
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     racc (1.6.2)
-    rack (2.2.7)
+    rack (2.2.8.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.7)
